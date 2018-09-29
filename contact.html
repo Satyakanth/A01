@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Home</title>
+    <link rel="stylesheet" href="satya.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Satyakanth</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="game.html">Game</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">            
+            <form class="col-sm-12">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control"aria-describedby="emailHelp" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Question</label>
+                    <textarea type="text" class="form-control" aria-describedby="emailHelp" placeholder="Question"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary float-right">Submit</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="https://www.ibm.com/cloud/garage/images/tools_icons/bitbucket.png" alt="bitbucket" class="rounded-circle w-50 h-50" >
+            </div>
+            <div class="col-sm-4">
+                <img src="https://pbs.twimg.com/profile_images/1017516299143041024/fLFdcGsl_400x400.jpg" alt="github" class="rounded-circle w-50 h-50">
+            </div>
+            <div class="col-sm-4">
+                <img src="data:image/png;base64,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" alt="linkedIn" class="rounded-circle w-50 h-50">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
