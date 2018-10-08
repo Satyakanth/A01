@@ -14,13 +14,26 @@ const game = (function () {
     document.getElementById('lower-left'),
     document.getElementById('lower-mid'),
     document.getElementById('lower-right')
-  ];
+  ]
+
+  let status = [
+
+  ]
+  status[8] = undefined
 
   for (let i = 0; i < cellElements.length; i++) {
     cellElements[i].addEventListener('click', async function () {
 
       // add player's X
       const isValidMove = await addX(cellElements[i]);
+      status[i] = 'X'
+      let winner = getWinner()
+      if(winner){
+        setTimeout(function(){
+          alert(winner + "won")
+          window.location.reload()
+        }, 1)
+      }
 
       if (isValidMove) {
 
@@ -28,8 +41,17 @@ const game = (function () {
         const j = await findBestMove(cellElements);
 
         // pause, then add computer's O
-        await new Promise((resolve) => setTimeout(() => resolve(), 2000));
+        await new Promise((resolve) => setTimeout(() => resolve(), 150));
         await addO(cellElements[j]);
+        status[j] = "Y"
+        winner = getWinner()
+        if(winner){
+          setTimeout(function(){
+            alert(winner + "won")
+            window.location.reload()
+          }, 1)
+        }
+  
       }
 
     });
@@ -60,4 +82,41 @@ const game = (function () {
     cellElement.appendChild(headingElement);
   }
 
+  
+  function getWinner(){
+    let twodArray = [
+        status.slice(0,3),
+        status.slice(3,6),
+        status.slice(6,9)
+    ]
+
+    for(row of twodArray){
+      let prevelement = ''
+      let count = 0
+      for(col of row){
+        if(col === prevelement){
+          count += 1
+        }
+        prevelement = col
+      }
+      if(count === 2){
+        return prevelement
+      }
+    }
+
+    for(col of [0,1,2]){
+      let prevelement = ''
+      let count = 0
+      for(row of [0,1,2]){
+        if(twodArray[row][col] === prevelement){
+          count += 1
+        }
+        prevelement = twodArray[row][col]
+      }
+      if(count === 2){
+        return twodArray[row][col]
+      }
+    }
+    return false
+  }
 })();
