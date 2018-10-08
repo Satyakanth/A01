@@ -2,6 +2,5 @@
 
 Simple game using CSS Grid
 
-Source: <https://github.com/profcase/web-tic-tac-toe>
+Source: https://satyakanth.github.io/A01/
 
-Demo: <https://profcase.github.io/web-tic-tac-toe/>
